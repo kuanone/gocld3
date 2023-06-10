@@ -4,101 +4,173 @@
 #include "task_spec.pb.h"
 
 #include <algorithm>
-
-#include <google/protobuf/io/coded_stream.h>
-#include <google/protobuf/extension_set.h>
-#include <google/protobuf/wire_format_lite.h>
-#include <google/protobuf/io/zero_copy_stream_impl_lite.h>
+#include "google/protobuf/io/coded_stream.h"
+#include "google/protobuf/extension_set.h"
+#include "google/protobuf/wire_format_lite.h"
+#include "google/protobuf/io/zero_copy_stream_impl_lite.h"
+#include "google/protobuf/generated_message_tctable_impl.h"
 // @@protoc_insertion_point(includes)
-#include <google/protobuf/port_def.inc>
 
+// Must be included last.
+#include "google/protobuf/port_def.inc"
 PROTOBUF_PRAGMA_INIT_SEG
+namespace _pb = ::google::protobuf;
+namespace _pbi = ::google::protobuf::internal;
+namespace _fl = ::google::protobuf::internal::field_layout;
 namespace chrome_lang_id {
-constexpr TaskInput_Part::TaskInput_Part(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : file_pattern_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
-  , file_format_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
-  , record_format_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string){}
+        template <typename>
+PROTOBUF_CONSTEXPR TaskInput_Part::TaskInput_Part(::_pbi::ConstantInitialized)
+    : _impl_{
+      /*decltype(_impl_._has_bits_)*/ {},
+      /*decltype(_impl_._cached_size_)*/ {},
+      /*decltype(_impl_.file_pattern_)*/ {
+          &::_pbi::fixed_address_empty_string,
+          ::_pbi::ConstantInitialized{},
+      },
+      /*decltype(_impl_.file_format_)*/ {
+          &::_pbi::fixed_address_empty_string,
+          ::_pbi::ConstantInitialized{},
+      },
+      /*decltype(_impl_.record_format_)*/ {
+          &::_pbi::fixed_address_empty_string,
+          ::_pbi::ConstantInitialized{},
+      },
+    } {}
 struct TaskInput_PartDefaultTypeInternal {
-  constexpr TaskInput_PartDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR TaskInput_PartDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~TaskInput_PartDefaultTypeInternal() {}
   union {
     TaskInput_Part _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT TaskInput_PartDefaultTypeInternal _TaskInput_Part_default_instance_;
-constexpr TaskInput::TaskInput(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : file_format_()
-  , record_format_()
-  , part_()
-  , name_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
-  , creator_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
-  , multi_file_(false){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 TaskInput_PartDefaultTypeInternal _TaskInput_Part_default_instance_;
+        template <typename>
+PROTOBUF_CONSTEXPR TaskInput::TaskInput(::_pbi::ConstantInitialized)
+    : _impl_{
+      /*decltype(_impl_._has_bits_)*/ {},
+      /*decltype(_impl_._cached_size_)*/ {},
+      /*decltype(_impl_.file_format_)*/ {},
+      /*decltype(_impl_.record_format_)*/ {},
+      /*decltype(_impl_.part_)*/ {},
+      /*decltype(_impl_.name_)*/ {
+          &::_pbi::fixed_address_empty_string,
+          ::_pbi::ConstantInitialized{},
+      },
+      /*decltype(_impl_.creator_)*/ {
+          &::_pbi::fixed_address_empty_string,
+          ::_pbi::ConstantInitialized{},
+      },
+      /*decltype(_impl_.multi_file_)*/ false,
+    } {}
 struct TaskInputDefaultTypeInternal {
-  constexpr TaskInputDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR TaskInputDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~TaskInputDefaultTypeInternal() {}
   union {
     TaskInput _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT TaskInputDefaultTypeInternal _TaskInput_default_instance_;
-constexpr TaskOutput::TaskOutput(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : name_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
-  , file_format_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
-  , record_format_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
-  , file_base_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
-  , file_extension_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
-  , shards_(0){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 TaskInputDefaultTypeInternal _TaskInput_default_instance_;
+        template <typename>
+PROTOBUF_CONSTEXPR TaskOutput::TaskOutput(::_pbi::ConstantInitialized)
+    : _impl_{
+      /*decltype(_impl_._has_bits_)*/ {},
+      /*decltype(_impl_._cached_size_)*/ {},
+      /*decltype(_impl_.name_)*/ {
+          &::_pbi::fixed_address_empty_string,
+          ::_pbi::ConstantInitialized{},
+      },
+      /*decltype(_impl_.file_format_)*/ {
+          &::_pbi::fixed_address_empty_string,
+          ::_pbi::ConstantInitialized{},
+      },
+      /*decltype(_impl_.record_format_)*/ {
+          &::_pbi::fixed_address_empty_string,
+          ::_pbi::ConstantInitialized{},
+      },
+      /*decltype(_impl_.file_base_)*/ {
+          &::_pbi::fixed_address_empty_string,
+          ::_pbi::ConstantInitialized{},
+      },
+      /*decltype(_impl_.file_extension_)*/ {
+          &::_pbi::fixed_address_empty_string,
+          ::_pbi::ConstantInitialized{},
+      },
+      /*decltype(_impl_.shards_)*/ 0,
+    } {}
 struct TaskOutputDefaultTypeInternal {
-  constexpr TaskOutputDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR TaskOutputDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~TaskOutputDefaultTypeInternal() {}
   union {
     TaskOutput _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT TaskOutputDefaultTypeInternal _TaskOutput_default_instance_;
-constexpr TaskSpec_Parameter::TaskSpec_Parameter(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : name_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
-  , value_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 TaskOutputDefaultTypeInternal _TaskOutput_default_instance_;
+        template <typename>
+PROTOBUF_CONSTEXPR TaskSpec_Parameter::TaskSpec_Parameter(::_pbi::ConstantInitialized)
+    : _impl_{
+      /*decltype(_impl_._has_bits_)*/ {},
+      /*decltype(_impl_._cached_size_)*/ {},
+      /*decltype(_impl_.name_)*/ {
+          &::_pbi::fixed_address_empty_string,
+          ::_pbi::ConstantInitialized{},
+      },
+      /*decltype(_impl_.value_)*/ {
+          &::_pbi::fixed_address_empty_string,
+          ::_pbi::ConstantInitialized{},
+      },
+    } {}
 struct TaskSpec_ParameterDefaultTypeInternal {
-  constexpr TaskSpec_ParameterDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR TaskSpec_ParameterDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~TaskSpec_ParameterDefaultTypeInternal() {}
   union {
     TaskSpec_Parameter _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT TaskSpec_ParameterDefaultTypeInternal _TaskSpec_Parameter_default_instance_;
-constexpr TaskSpec::TaskSpec(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : parameter_()
-  , input_()
-  , output_()
-  , task_name_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
-  , task_type_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string){}
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 TaskSpec_ParameterDefaultTypeInternal _TaskSpec_Parameter_default_instance_;
+        template <typename>
+PROTOBUF_CONSTEXPR TaskSpec::TaskSpec(::_pbi::ConstantInitialized)
+    : _impl_{
+      /*decltype(_impl_._has_bits_)*/ {},
+      /*decltype(_impl_._cached_size_)*/ {},
+      /*decltype(_impl_.parameter_)*/ {},
+      /*decltype(_impl_.input_)*/ {},
+      /*decltype(_impl_.output_)*/ {},
+      /*decltype(_impl_.task_name_)*/ {
+          &::_pbi::fixed_address_empty_string,
+          ::_pbi::ConstantInitialized{},
+      },
+      /*decltype(_impl_.task_type_)*/ {
+          &::_pbi::fixed_address_empty_string,
+          ::_pbi::ConstantInitialized{},
+      },
+    } {}
 struct TaskSpecDefaultTypeInternal {
-  constexpr TaskSpecDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  PROTOBUF_CONSTEXPR TaskSpecDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~TaskSpecDefaultTypeInternal() {}
   union {
     TaskSpec _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT TaskSpecDefaultTypeInternal _TaskSpec_default_instance_;
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 TaskSpecDefaultTypeInternal _TaskSpec_default_instance_;
 }  // namespace chrome_lang_id
 namespace chrome_lang_id {
-
 // ===================================================================
 
 class TaskInput_Part::_Internal {
  public:
-  using HasBits = decltype(std::declval<TaskInput_Part>()._has_bits_);
+  using HasBits = decltype(std::declval<TaskInput_Part>()._impl_._has_bits_);
+  static constexpr ::int32_t kHasBitsOffset =
+    8 * PROTOBUF_FIELD_OFFSET(TaskInput_Part, _impl_._has_bits_);
   static void set_has_file_pattern(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
@@ -110,242 +182,254 @@ class TaskInput_Part::_Internal {
   }
 };
 
-TaskInput_Part::TaskInput_Part(::PROTOBUF_NAMESPACE_ID::Arena* arena,
-                         bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
-  SharedCtor();
-  if (!is_message_owned) {
-    RegisterArenaDtor(arena);
-  }
+TaskInput_Part::TaskInput_Part(::google::protobuf::Arena* arena)
+    : ::google::protobuf::MessageLite(arena) {
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:chrome_lang_id.TaskInput.Part)
 }
-TaskInput_Part::TaskInput_Part(const TaskInput_Part& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(),
-      _has_bits_(from._has_bits_) {
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  file_pattern_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (from._internal_has_file_pattern()) {
-    file_pattern_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_file_pattern(), 
-      GetArenaForAllocation());
+TaskInput_Part::TaskInput_Part(const TaskInput_Part& from) : ::google::protobuf::MessageLite() {
+  TaskInput_Part* const _this = this;
+  (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){from._impl_._has_bits_},
+      /*decltype(_impl_._cached_size_)*/ {},
+      decltype(_impl_.file_pattern_){},
+      decltype(_impl_.file_format_){},
+      decltype(_impl_.record_format_){},
+  };
+  _internal_metadata_.MergeFrom<std::string>(
+      from._internal_metadata_);
+  _impl_.file_pattern_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+        _impl_.file_pattern_.Set("", GetArenaForAllocation());
+  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if ((from._impl_._has_bits_[0] & 0x00000001u) != 0) {
+    _this->_impl_.file_pattern_.Set(from._internal_file_pattern(), _this->GetArenaForAllocation());
   }
-  file_format_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (from._internal_has_file_format()) {
-    file_format_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_file_format(), 
-      GetArenaForAllocation());
+  _impl_.file_format_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+        _impl_.file_format_.Set("", GetArenaForAllocation());
+  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if ((from._impl_._has_bits_[0] & 0x00000002u) != 0) {
+    _this->_impl_.file_format_.Set(from._internal_file_format(), _this->GetArenaForAllocation());
   }
-  record_format_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (from._internal_has_record_format()) {
-    record_format_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_record_format(), 
-      GetArenaForAllocation());
+  _impl_.record_format_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+        _impl_.record_format_.Set("", GetArenaForAllocation());
+  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if ((from._impl_._has_bits_[0] & 0x00000004u) != 0) {
+    _this->_impl_.record_format_.Set(from._internal_record_format(), _this->GetArenaForAllocation());
   }
+
   // @@protoc_insertion_point(copy_constructor:chrome_lang_id.TaskInput.Part)
 }
-
-inline void TaskInput_Part::SharedCtor() {
-file_pattern_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-file_format_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-record_format_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+inline void TaskInput_Part::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){},
+      /*decltype(_impl_._cached_size_)*/ {},
+      decltype(_impl_.file_pattern_){},
+      decltype(_impl_.file_format_){},
+      decltype(_impl_.record_format_){},
+  };
+  _impl_.file_pattern_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+        _impl_.file_pattern_.Set("", GetArenaForAllocation());
+  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  _impl_.file_format_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+        _impl_.file_format_.Set("", GetArenaForAllocation());
+  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  _impl_.record_format_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+        _impl_.record_format_.Set("", GetArenaForAllocation());
+  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
-
 TaskInput_Part::~TaskInput_Part() {
   // @@protoc_insertion_point(destructor:chrome_lang_id.TaskInput.Part)
-  if (GetArenaForAllocation() != nullptr) return;
-  SharedDtor();
   _internal_metadata_.Delete<std::string>();
+  SharedDtor();
 }
-
 inline void TaskInput_Part::SharedDtor() {
-  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  file_pattern_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  file_format_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  record_format_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-}
-
-void TaskInput_Part::ArenaDtor(void* object) {
-  TaskInput_Part* _this = reinterpret_cast< TaskInput_Part* >(object);
-  (void)_this;
-}
-void TaskInput_Part::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.file_pattern_.Destroy();
+  _impl_.file_format_.Destroy();
+  _impl_.record_format_.Destroy();
 }
 void TaskInput_Part::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
-void TaskInput_Part::Clear() {
+PROTOBUF_NOINLINE void TaskInput_Part::Clear() {
 // @@protoc_insertion_point(message_clear_start:chrome_lang_id.TaskInput.Part)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  cached_has_bits = _has_bits_[0];
+  cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000007u) {
     if (cached_has_bits & 0x00000001u) {
-      file_pattern_.ClearNonDefaultToEmpty();
+      _impl_.file_pattern_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000002u) {
-      file_format_.ClearNonDefaultToEmpty();
+      _impl_.file_format_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000004u) {
-      record_format_.ClearNonDefaultToEmpty();
+      _impl_.record_format_.ClearNonDefaultToEmpty();
     }
   }
-  _has_bits_.Clear();
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
-const char* TaskInput_Part::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  _Internal::HasBits has_bits{};
-  while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    switch (tag >> 3) {
-      // optional string file_pattern = 7;
-      case 7:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 58)) {
-          auto str = _internal_mutable_file_pattern();
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // optional string file_format = 8;
-      case 8:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 66)) {
-          auto str = _internal_mutable_file_format();
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // optional string record_format = 9;
-      case 9:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 74)) {
-          auto str = _internal_mutable_record_format();
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag == 0) || ((tag & 7) == 4)) {
-          CHK_(ptr);
-          ctx->SetLastTag(tag);
-          goto success;
-        }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<std::string>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
-      }
-    }  // switch
-  }  // while
-success:
-  _has_bits_.Or(has_bits);
+const char* TaskInput_Part::_InternalParse(
+    const char* ptr, ::_pbi::ParseContext* ctx) {
+  ptr = ::_pbi::TcParser::ParseLoop(this, ptr, ctx, &_table_.header);
   return ptr;
-failure:
-  ptr = nullptr;
-  goto success;
-#undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* TaskInput_Part::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:chrome_lang_id.TaskInput.Part)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
 
-  cached_has_bits = _has_bits_[0];
+PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
+const ::_pbi::TcParseTable<2, 3, 0, 0, 2> TaskInput_Part::_table_ = {
+  {
+    PROTOBUF_FIELD_OFFSET(TaskInput_Part, _impl_._has_bits_),
+    0, // no _extensions_
+    9, 24,  // max_field_number, fast_idx_mask
+    offsetof(decltype(_table_), field_lookup_table),
+    4294966847,  // skipmap
+    offsetof(decltype(_table_), field_entries),
+    3,  // num_field_entries
+    0,  // num_aux_entries
+    offsetof(decltype(_table_), field_names),  // no aux_entries
+    &_TaskInput_Part_default_instance_._instance,
+    ::_pbi::TcParser::GenericFallbackLite,  // fallback
+  }, {{
+    // optional string file_format = 8;
+    {::_pbi::TcParser::FastBS1,
+     {66, 1, 0, PROTOBUF_FIELD_OFFSET(TaskInput_Part, _impl_.file_format_)}},
+    // optional string record_format = 9;
+    {::_pbi::TcParser::FastBS1,
+     {74, 2, 0, PROTOBUF_FIELD_OFFSET(TaskInput_Part, _impl_.record_format_)}},
+    {::_pbi::TcParser::FastEndG1, {52, 52}},
+    // optional string file_pattern = 7;
+    {::_pbi::TcParser::FastBS1,
+     {58, 0, 0, PROTOBUF_FIELD_OFFSET(TaskInput_Part, _impl_.file_pattern_)}},
+  }}, {{
+    65535, 65535
+  }}, {{
+    // optional string file_pattern = 7;
+    {PROTOBUF_FIELD_OFFSET(TaskInput_Part, _impl_.file_pattern_), _Internal::kHasBitsOffset + 0, 0,
+    (0 | ::_fl::kFcOptional | ::_fl::kBytes | ::_fl::kRepAString)},
+    // optional string file_format = 8;
+    {PROTOBUF_FIELD_OFFSET(TaskInput_Part, _impl_.file_format_), _Internal::kHasBitsOffset + 1, 0,
+    (0 | ::_fl::kFcOptional | ::_fl::kBytes | ::_fl::kRepAString)},
+    // optional string record_format = 9;
+    {PROTOBUF_FIELD_OFFSET(TaskInput_Part, _impl_.record_format_), _Internal::kHasBitsOffset + 2, 0,
+    (0 | ::_fl::kFcOptional | ::_fl::kBytes | ::_fl::kRepAString)},
+  }},
+  // no aux_entries
+  {{
+  }},
+};
+
+::uint8_t* TaskInput_Part::_InternalSerialize(
+    ::uint8_t* target,
+    ::google::protobuf::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:chrome_lang_id.TaskInput.Part)
+  ::uint32_t cached_has_bits = 0;
+  (void)cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
   // optional string file_pattern = 7;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteStringMaybeAliased(
-        7, this->_internal_file_pattern(), target);
+    const std::string& _s = this->_internal_file_pattern();
+    target = stream->WriteStringMaybeAliased(7, _s, target);
   }
 
   // optional string file_format = 8;
   if (cached_has_bits & 0x00000002u) {
-    target = stream->WriteStringMaybeAliased(
-        8, this->_internal_file_format(), target);
+    const std::string& _s = this->_internal_file_format();
+    target = stream->WriteStringMaybeAliased(8, _s, target);
   }
 
   // optional string record_format = 9;
   if (cached_has_bits & 0x00000004u) {
-    target = stream->WriteStringMaybeAliased(
-        9, this->_internal_record_format(), target);
+    const std::string& _s = this->_internal_record_format();
+    target = stream->WriteStringMaybeAliased(9, _s, target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+    target = stream->WriteRaw(
+        _internal_metadata_.unknown_fields<std::string>(::google::protobuf::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::google::protobuf::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:chrome_lang_id.TaskInput.Part)
   return target;
 }
 
-size_t TaskInput_Part::ByteSizeLong() const {
+::size_t TaskInput_Part::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:chrome_lang_id.TaskInput.Part)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  cached_has_bits = _has_bits_[0];
+  cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000007u) {
     // optional string file_pattern = 7;
     if (cached_has_bits & 0x00000001u) {
-      total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-          this->_internal_file_pattern());
+      total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
+                                      this->_internal_file_pattern());
     }
 
     // optional string file_format = 8;
     if (cached_has_bits & 0x00000002u) {
-      total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-          this->_internal_file_format());
+      total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
+                                      this->_internal_file_format());
     }
 
     // optional string record_format = 9;
     if (cached_has_bits & 0x00000004u) {
-      total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-          this->_internal_record_format());
+      total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
+                                      this->_internal_record_format());
     }
 
   }
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+    total_size += _internal_metadata_.unknown_fields<std::string>(::google::protobuf::internal::GetEmptyString).size();
   }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  int cached_size = ::_pbi::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
 }
 
 void TaskInput_Part::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::PROTOBUF_NAMESPACE_ID::internal::DownCast<const TaskInput_Part*>(
+    const ::google::protobuf::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const TaskInput_Part*>(
       &from));
 }
 
 void TaskInput_Part::MergeFrom(const TaskInput_Part& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:chrome_lang_id.TaskInput.Part)
-  GOOGLE_DCHECK_NE(&from, this);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  TaskInput_Part* const _this = this;
+  // @@protoc_insertion_point(class_specific_merge_from_start:chrome_lang_id.TaskInput.Part)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = from._has_bits_[0];
+  cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x00000007u) {
     if (cached_has_bits & 0x00000001u) {
-      _internal_set_file_pattern(from._internal_file_pattern());
+      _this->_internal_set_file_pattern(from._internal_file_pattern());
     }
     if (cached_has_bits & 0x00000002u) {
-      _internal_set_file_format(from._internal_file_format());
+      _this->_internal_set_file_format(from._internal_file_format());
     }
     if (cached_has_bits & 0x00000004u) {
-      _internal_set_record_format(from._internal_record_format());
+      _this->_internal_set_record_format(from._internal_record_format());
     }
   }
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void TaskInput_Part::CopyFrom(const TaskInput_Part& from) {
@@ -355,41 +439,35 @@ void TaskInput_Part::CopyFrom(const TaskInput_Part& from) {
   MergeFrom(from);
 }
 
-bool TaskInput_Part::IsInitialized() const {
+PROTOBUF_NOINLINE bool TaskInput_Part::IsInitialized() const {
   return true;
 }
 
 void TaskInput_Part::InternalSwap(TaskInput_Part* other) {
   using std::swap;
+  auto* lhs_arena = GetArenaForAllocation();
+  auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(_has_bits_[0], other->_has_bits_[0]);
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
-      &file_pattern_, GetArenaForAllocation(),
-      &other->file_pattern_, other->GetArenaForAllocation()
-  );
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
-      &file_format_, GetArenaForAllocation(),
-      &other->file_format_, other->GetArenaForAllocation()
-  );
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
-      &record_format_, GetArenaForAllocation(),
-      &other->record_format_, other->GetArenaForAllocation()
-  );
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.file_pattern_, lhs_arena,
+                                       &other->_impl_.file_pattern_, rhs_arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.file_format_, lhs_arena,
+                                       &other->_impl_.file_format_, rhs_arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.record_format_, lhs_arena,
+                                       &other->_impl_.record_format_, rhs_arena);
 }
 
 std::string TaskInput_Part::GetTypeName() const {
   return "chrome_lang_id.TaskInput.Part";
 }
 
-
 // ===================================================================
 
 class TaskInput::_Internal {
  public:
-  using HasBits = decltype(std::declval<TaskInput>()._has_bits_);
+  using HasBits = decltype(std::declval<TaskInput>()._impl_._has_bits_);
+  static constexpr ::int32_t kHasBitsOffset =
+    8 * PROTOBUF_FIELD_OFFSET(TaskInput, _impl_._has_bits_);
   static void set_has_name(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
@@ -404,326 +482,314 @@ class TaskInput::_Internal {
   }
 };
 
-TaskInput::TaskInput(::PROTOBUF_NAMESPACE_ID::Arena* arena,
-                         bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned),
-  file_format_(arena),
-  record_format_(arena),
-  part_(arena) {
-  SharedCtor();
-  if (!is_message_owned) {
-    RegisterArenaDtor(arena);
-  }
+TaskInput::TaskInput(::google::protobuf::Arena* arena)
+    : ::google::protobuf::MessageLite(arena) {
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:chrome_lang_id.TaskInput)
 }
-TaskInput::TaskInput(const TaskInput& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(),
-      _has_bits_(from._has_bits_),
-      file_format_(from.file_format_),
-      record_format_(from.record_format_),
-      part_(from.part_) {
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (from._internal_has_name()) {
-    name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_name(), 
-      GetArenaForAllocation());
+TaskInput::TaskInput(const TaskInput& from) : ::google::protobuf::MessageLite() {
+  TaskInput* const _this = this;
+  (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){from._impl_._has_bits_},
+      /*decltype(_impl_._cached_size_)*/ {},
+      decltype(_impl_.file_format_){from._impl_.file_format_},
+      decltype(_impl_.record_format_){from._impl_.record_format_},
+      decltype(_impl_.part_){from._impl_.part_},
+      decltype(_impl_.name_){},
+      decltype(_impl_.creator_){},
+      decltype(_impl_.multi_file_){},
+  };
+  _internal_metadata_.MergeFrom<std::string>(
+      from._internal_metadata_);
+  _impl_.name_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+        _impl_.name_.Set("", GetArenaForAllocation());
+  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if ((from._impl_._has_bits_[0] & 0x00000001u) != 0) {
+    _this->_impl_.name_.Set(from._internal_name(), _this->GetArenaForAllocation());
   }
-  creator_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (from._internal_has_creator()) {
-    creator_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_creator(), 
-      GetArenaForAllocation());
+  _impl_.creator_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+        _impl_.creator_.Set("", GetArenaForAllocation());
+  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if ((from._impl_._has_bits_[0] & 0x00000002u) != 0) {
+    _this->_impl_.creator_.Set(from._internal_creator(), _this->GetArenaForAllocation());
   }
-  multi_file_ = from.multi_file_;
+  _this->_impl_.multi_file_ = from._impl_.multi_file_;
+
   // @@protoc_insertion_point(copy_constructor:chrome_lang_id.TaskInput)
 }
-
-inline void TaskInput::SharedCtor() {
-name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-creator_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-multi_file_ = false;
+inline void TaskInput::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){},
+      /*decltype(_impl_._cached_size_)*/ {},
+      decltype(_impl_.file_format_){arena},
+      decltype(_impl_.record_format_){arena},
+      decltype(_impl_.part_){arena},
+      decltype(_impl_.name_){},
+      decltype(_impl_.creator_){},
+      decltype(_impl_.multi_file_){false},
+  };
+  _impl_.name_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+        _impl_.name_.Set("", GetArenaForAllocation());
+  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  _impl_.creator_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+        _impl_.creator_.Set("", GetArenaForAllocation());
+  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
-
 TaskInput::~TaskInput() {
   // @@protoc_insertion_point(destructor:chrome_lang_id.TaskInput)
-  if (GetArenaForAllocation() != nullptr) return;
-  SharedDtor();
   _internal_metadata_.Delete<std::string>();
+  SharedDtor();
 }
-
 inline void TaskInput::SharedDtor() {
-  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  name_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  creator_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-}
-
-void TaskInput::ArenaDtor(void* object) {
-  TaskInput* _this = reinterpret_cast< TaskInput* >(object);
-  (void)_this;
-}
-void TaskInput::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  _internal_mutable_file_format()->~RepeatedPtrField();
+  _internal_mutable_record_format()->~RepeatedPtrField();
+  _impl_.part_.~RepeatedPtrField();
+  _impl_.name_.Destroy();
+  _impl_.creator_.Destroy();
 }
 void TaskInput::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
-void TaskInput::Clear() {
+PROTOBUF_NOINLINE void TaskInput::Clear() {
 // @@protoc_insertion_point(message_clear_start:chrome_lang_id.TaskInput)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  file_format_.Clear();
-  record_format_.Clear();
-  part_.Clear();
-  cached_has_bits = _has_bits_[0];
+  _internal_mutable_file_format()->Clear();
+  _internal_mutable_record_format()->Clear();
+  _internal_mutable_part()->Clear();
+  cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
-      name_.ClearNonDefaultToEmpty();
+      _impl_.name_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000002u) {
-      creator_.ClearNonDefaultToEmpty();
+      _impl_.creator_.ClearNonDefaultToEmpty();
     }
   }
-  multi_file_ = false;
-  _has_bits_.Clear();
+  _impl_.multi_file_ = false;
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
-const char* TaskInput::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  _Internal::HasBits has_bits{};
-  while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    switch (tag >> 3) {
-      // required string name = 1;
-      case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          auto str = _internal_mutable_name();
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // optional string creator = 2;
-      case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          auto str = _internal_mutable_creator();
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // repeated string file_format = 3;
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
-          ptr -= 1;
-          do {
-            ptr += 1;
-            auto str = _internal_add_file_format();
-            ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-            CHK_(ptr);
-            if (!ctx->DataAvailable(ptr)) break;
-          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<26>(ptr));
-        } else goto handle_unusual;
-        continue;
-      // repeated string record_format = 4;
-      case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
-          ptr -= 1;
-          do {
-            ptr += 1;
-            auto str = _internal_add_record_format();
-            ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-            CHK_(ptr);
-            if (!ctx->DataAvailable(ptr)) break;
-          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<34>(ptr));
-        } else goto handle_unusual;
-        continue;
-      // optional bool multi_file = 5 [default = false];
-      case 5:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 40)) {
-          _Internal::set_has_multi_file(&has_bits);
-          multi_file_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // repeated group Part = 6 { ... };
-      case 6:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 51)) {
-          ptr -= 1;
-          do {
-            ptr += 1;
-            ptr = ctx->ParseGroup(_internal_add_part(), ptr, 51);
-            CHK_(ptr);
-            if (!ctx->DataAvailable(ptr)) break;
-          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<51>(ptr));
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag == 0) || ((tag & 7) == 4)) {
-          CHK_(ptr);
-          ctx->SetLastTag(tag);
-          goto success;
-        }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<std::string>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
-      }
-    }  // switch
-  }  // while
-success:
-  _has_bits_.Or(has_bits);
+const char* TaskInput::_InternalParse(
+    const char* ptr, ::_pbi::ParseContext* ctx) {
+  ptr = ::_pbi::TcParser::ParseLoop(this, ptr, ctx, &_table_.header);
   return ptr;
-failure:
-  ptr = nullptr;
-  goto success;
-#undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* TaskInput::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:chrome_lang_id.TaskInput)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
 
-  cached_has_bits = _has_bits_[0];
+PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
+const ::_pbi::TcParseTable<3, 6, 1, 0, 2> TaskInput::_table_ = {
+  {
+    PROTOBUF_FIELD_OFFSET(TaskInput, _impl_._has_bits_),
+    0, // no _extensions_
+    6, 56,  // max_field_number, fast_idx_mask
+    offsetof(decltype(_table_), field_lookup_table),
+    4294967232,  // skipmap
+    offsetof(decltype(_table_), field_entries),
+    6,  // num_field_entries
+    1,  // num_aux_entries
+    offsetof(decltype(_table_), aux_entries),
+    &_TaskInput_default_instance_._instance,
+    ::_pbi::TcParser::GenericFallbackLite,  // fallback
+  }, {{
+    {::_pbi::TcParser::MiniParse, {}},
+    // required string name = 1;
+    {::_pbi::TcParser::FastBS1,
+     {10, 0, 0, PROTOBUF_FIELD_OFFSET(TaskInput, _impl_.name_)}},
+    // optional string creator = 2;
+    {::_pbi::TcParser::FastBS1,
+     {18, 1, 0, PROTOBUF_FIELD_OFFSET(TaskInput, _impl_.creator_)}},
+    // repeated string file_format = 3;
+    {::_pbi::TcParser::FastBR1,
+     {26, 63, 0, PROTOBUF_FIELD_OFFSET(TaskInput, _impl_.file_format_)}},
+    // repeated string record_format = 4;
+    {::_pbi::TcParser::FastBR1,
+     {34, 63, 0, PROTOBUF_FIELD_OFFSET(TaskInput, _impl_.record_format_)}},
+    // optional bool multi_file = 5 [default = false];
+    {::_pbi::TcParser::FastV8S1,
+     {40, 2, 0, PROTOBUF_FIELD_OFFSET(TaskInput, _impl_.multi_file_)}},
+    // repeated group Part = 6 { ... };
+    {::_pbi::TcParser::FastGtR1,
+     {51, 63, 0, PROTOBUF_FIELD_OFFSET(TaskInput, _impl_.part_)}},
+    {::_pbi::TcParser::MiniParse, {}},
+  }}, {{
+    65535, 65535
+  }}, {{
+    // required string name = 1;
+    {PROTOBUF_FIELD_OFFSET(TaskInput, _impl_.name_), _Internal::kHasBitsOffset + 0, 0,
+    (0 | ::_fl::kFcOptional | ::_fl::kBytes | ::_fl::kRepAString)},
+    // optional string creator = 2;
+    {PROTOBUF_FIELD_OFFSET(TaskInput, _impl_.creator_), _Internal::kHasBitsOffset + 1, 0,
+    (0 | ::_fl::kFcOptional | ::_fl::kBytes | ::_fl::kRepAString)},
+    // repeated string file_format = 3;
+    {PROTOBUF_FIELD_OFFSET(TaskInput, _impl_.file_format_), -1, 0,
+    (0 | ::_fl::kFcRepeated | ::_fl::kBytes | ::_fl::kRepSString)},
+    // repeated string record_format = 4;
+    {PROTOBUF_FIELD_OFFSET(TaskInput, _impl_.record_format_), -1, 0,
+    (0 | ::_fl::kFcRepeated | ::_fl::kBytes | ::_fl::kRepSString)},
+    // optional bool multi_file = 5 [default = false];
+    {PROTOBUF_FIELD_OFFSET(TaskInput, _impl_.multi_file_), _Internal::kHasBitsOffset + 2, 0,
+    (0 | ::_fl::kFcOptional | ::_fl::kBool)},
+    // repeated group Part = 6 { ... };
+    {PROTOBUF_FIELD_OFFSET(TaskInput, _impl_.part_), -1, 0,
+    (0 | ::_fl::kFcRepeated | ::_fl::kMessage | ::_fl::kRepGroup | ::_fl::kTvTable)},
+  }}, {{
+    {::_pbi::TcParser::GetTable<::chrome_lang_id::TaskInput_Part>()},
+  }}, {{
+  }},
+};
+
+::uint8_t* TaskInput::_InternalSerialize(
+    ::uint8_t* target,
+    ::google::protobuf::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:chrome_lang_id.TaskInput)
+  ::uint32_t cached_has_bits = 0;
+  (void)cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
   // required string name = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteStringMaybeAliased(
-        1, this->_internal_name(), target);
+    const std::string& _s = this->_internal_name();
+    target = stream->WriteStringMaybeAliased(1, _s, target);
   }
 
   // optional string creator = 2;
   if (cached_has_bits & 0x00000002u) {
-    target = stream->WriteStringMaybeAliased(
-        2, this->_internal_creator(), target);
+    const std::string& _s = this->_internal_creator();
+    target = stream->WriteStringMaybeAliased(2, _s, target);
   }
 
   // repeated string file_format = 3;
-  for (int i = 0, n = this->_internal_file_format_size(); i < n; i++) {
-    const auto& s = this->_internal_file_format(i);
+  for (int i = 0, n = this->_internal_file_format_size(); i < n; ++i) {
+    const auto& s = this->_internal_file_format().Get(i);
     target = stream->WriteString(3, s, target);
   }
 
   // repeated string record_format = 4;
-  for (int i = 0, n = this->_internal_record_format_size(); i < n; i++) {
-    const auto& s = this->_internal_record_format(i);
+  for (int i = 0, n = this->_internal_record_format_size(); i < n; ++i) {
+    const auto& s = this->_internal_record_format().Get(i);
     target = stream->WriteString(4, s, target);
   }
 
   // optional bool multi_file = 5 [default = false];
   if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(5, this->_internal_multi_file(), target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(
+        5, this->_internal_multi_file(), target);
   }
 
   // repeated group Part = 6 { ... };
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->_internal_part_size()); i < n; i++) {
+  for (unsigned i = 0,
+      n = static_cast<unsigned>(this->_internal_part_size()); i < n; i++) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteGroup(6, this->_internal_part(i), target, stream);
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteGroup(6, this->_internal_part().Get(i), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+    target = stream->WriteRaw(
+        _internal_metadata_.unknown_fields<std::string>(::google::protobuf::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::google::protobuf::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:chrome_lang_id.TaskInput)
   return target;
 }
 
-size_t TaskInput::ByteSizeLong() const {
+::size_t TaskInput::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:chrome_lang_id.TaskInput)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  // required string name = 1;
-  if (_internal_has_name()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_name());
-  }
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // repeated string file_format = 3;
-  total_size += 1 *
-      ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(file_format_.size());
-  for (int i = 0, n = file_format_.size(); i < n; i++) {
-    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-      file_format_.Get(i));
+  total_size += 1 * ::google::protobuf::internal::FromIntSize(_internal_file_format().size());
+  for (int i = 0, n = _internal_file_format().size(); i < n; ++i) {
+    total_size += ::google::protobuf::internal::WireFormatLite::StringSize(
+        _internal_file_format().Get(i));
   }
-
   // repeated string record_format = 4;
-  total_size += 1 *
-      ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(record_format_.size());
-  for (int i = 0, n = record_format_.size(); i < n; i++) {
-    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-      record_format_.Get(i));
+  total_size += 1 * ::google::protobuf::internal::FromIntSize(_internal_record_format().size());
+  for (int i = 0, n = _internal_record_format().size(); i < n; ++i) {
+    total_size += ::google::protobuf::internal::WireFormatLite::StringSize(
+        _internal_record_format().Get(i));
   }
-
   // repeated group Part = 6 { ... };
   total_size += 2UL * this->_internal_part_size();
-  for (const auto& msg : this->part_) {
+  for (const auto& msg : this->_internal_part()) {
     total_size +=
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GroupSize(msg);
+      ::google::protobuf::internal::WireFormatLite::GroupSize(msg);
+  }
+  // required string name = 1;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
+                                    this->_internal_name());
   }
 
-  cached_has_bits = _has_bits_[0];
   if (cached_has_bits & 0x00000006u) {
     // optional string creator = 2;
     if (cached_has_bits & 0x00000002u) {
-      total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-          this->_internal_creator());
+      total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
+                                      this->_internal_creator());
     }
 
     // optional bool multi_file = 5 [default = false];
     if (cached_has_bits & 0x00000004u) {
-      total_size += 1 + 1;
+      total_size += 2;
     }
 
   }
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+    total_size += _internal_metadata_.unknown_fields<std::string>(::google::protobuf::internal::GetEmptyString).size();
   }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  int cached_size = ::_pbi::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
 }
 
 void TaskInput::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::PROTOBUF_NAMESPACE_ID::internal::DownCast<const TaskInput*>(
+    const ::google::protobuf::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const TaskInput*>(
       &from));
 }
 
 void TaskInput::MergeFrom(const TaskInput& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:chrome_lang_id.TaskInput)
-  GOOGLE_DCHECK_NE(&from, this);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  TaskInput* const _this = this;
+  // @@protoc_insertion_point(class_specific_merge_from_start:chrome_lang_id.TaskInput)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  file_format_.MergeFrom(from.file_format_);
-  record_format_.MergeFrom(from.record_format_);
-  part_.MergeFrom(from.part_);
-  cached_has_bits = from._has_bits_[0];
+  _this->_internal_mutable_file_format()->MergeFrom(from._internal_file_format());
+  _this->_internal_mutable_record_format()->MergeFrom(from._internal_record_format());
+  _this->_internal_mutable_part()->MergeFrom(from._internal_part());
+  cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x00000007u) {
     if (cached_has_bits & 0x00000001u) {
-      _internal_set_name(from._internal_name());
+      _this->_internal_set_name(from._internal_name());
     }
     if (cached_has_bits & 0x00000002u) {
-      _internal_set_creator(from._internal_creator());
+      _this->_internal_set_creator(from._internal_creator());
     }
     if (cached_has_bits & 0x00000004u) {
-      multi_file_ = from.multi_file_;
+      _this->_impl_.multi_file_ = from._impl_.multi_file_;
     }
-    _has_bits_[0] |= cached_has_bits;
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void TaskInput::CopyFrom(const TaskInput& from) {
@@ -733,41 +799,42 @@ void TaskInput::CopyFrom(const TaskInput& from) {
   MergeFrom(from);
 }
 
-bool TaskInput::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_has_bits_)) return false;
+PROTOBUF_NOINLINE bool TaskInput::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) {
+    return false;
+  }
   return true;
 }
 
 void TaskInput::InternalSwap(TaskInput* other) {
   using std::swap;
+  auto* lhs_arena = GetArenaForAllocation();
+  auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(_has_bits_[0], other->_has_bits_[0]);
-  file_format_.InternalSwap(&other->file_format_);
-  record_format_.InternalSwap(&other->record_format_);
-  part_.InternalSwap(&other->part_);
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
-      &name_, GetArenaForAllocation(),
-      &other->name_, other->GetArenaForAllocation()
-  );
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
-      &creator_, GetArenaForAllocation(),
-      &other->creator_, other->GetArenaForAllocation()
-  );
-  swap(multi_file_, other->multi_file_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  _internal_mutable_file_format()->InternalSwap(
+      other->_internal_mutable_file_format());
+  _internal_mutable_record_format()->InternalSwap(
+      other->_internal_mutable_record_format());
+  _internal_mutable_part()->InternalSwap(other->_internal_mutable_part());
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.name_, lhs_arena,
+                                       &other->_impl_.name_, rhs_arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.creator_, lhs_arena,
+                                       &other->_impl_.creator_, rhs_arena);
+        swap(_impl_.multi_file_, other->_impl_.multi_file_);
 }
 
 std::string TaskInput::GetTypeName() const {
   return "chrome_lang_id.TaskInput";
 }
 
-
 // ===================================================================
 
 class TaskOutput::_Internal {
  public:
-  using HasBits = decltype(std::declval<TaskOutput>()._has_bits_);
+  using HasBits = decltype(std::declval<TaskOutput>()._impl_._has_bits_);
+  static constexpr ::int32_t kHasBitsOffset =
+    8 * PROTOBUF_FIELD_OFFSET(TaskOutput, _impl_._has_bits_);
   static void set_has_name(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
@@ -791,337 +858,358 @@ class TaskOutput::_Internal {
   }
 };
 
-TaskOutput::TaskOutput(::PROTOBUF_NAMESPACE_ID::Arena* arena,
-                         bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
-  SharedCtor();
-  if (!is_message_owned) {
-    RegisterArenaDtor(arena);
-  }
+TaskOutput::TaskOutput(::google::protobuf::Arena* arena)
+    : ::google::protobuf::MessageLite(arena) {
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:chrome_lang_id.TaskOutput)
 }
-TaskOutput::TaskOutput(const TaskOutput& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(),
-      _has_bits_(from._has_bits_) {
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (from._internal_has_name()) {
-    name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_name(), 
-      GetArenaForAllocation());
+TaskOutput::TaskOutput(const TaskOutput& from) : ::google::protobuf::MessageLite() {
+  TaskOutput* const _this = this;
+  (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){from._impl_._has_bits_},
+      /*decltype(_impl_._cached_size_)*/ {},
+      decltype(_impl_.name_){},
+      decltype(_impl_.file_format_){},
+      decltype(_impl_.record_format_){},
+      decltype(_impl_.file_base_){},
+      decltype(_impl_.file_extension_){},
+      decltype(_impl_.shards_){},
+  };
+  _internal_metadata_.MergeFrom<std::string>(
+      from._internal_metadata_);
+  _impl_.name_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+        _impl_.name_.Set("", GetArenaForAllocation());
+  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if ((from._impl_._has_bits_[0] & 0x00000001u) != 0) {
+    _this->_impl_.name_.Set(from._internal_name(), _this->GetArenaForAllocation());
   }
-  file_format_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (from._internal_has_file_format()) {
-    file_format_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_file_format(), 
-      GetArenaForAllocation());
+  _impl_.file_format_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+        _impl_.file_format_.Set("", GetArenaForAllocation());
+  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if ((from._impl_._has_bits_[0] & 0x00000002u) != 0) {
+    _this->_impl_.file_format_.Set(from._internal_file_format(), _this->GetArenaForAllocation());
   }
-  record_format_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (from._internal_has_record_format()) {
-    record_format_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_record_format(), 
-      GetArenaForAllocation());
+  _impl_.record_format_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+        _impl_.record_format_.Set("", GetArenaForAllocation());
+  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if ((from._impl_._has_bits_[0] & 0x00000004u) != 0) {
+    _this->_impl_.record_format_.Set(from._internal_record_format(), _this->GetArenaForAllocation());
   }
-  file_base_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (from._internal_has_file_base()) {
-    file_base_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_file_base(), 
-      GetArenaForAllocation());
+  _impl_.file_base_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+        _impl_.file_base_.Set("", GetArenaForAllocation());
+  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if ((from._impl_._has_bits_[0] & 0x00000008u) != 0) {
+    _this->_impl_.file_base_.Set(from._internal_file_base(), _this->GetArenaForAllocation());
   }
-  file_extension_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (from._internal_has_file_extension()) {
-    file_extension_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_file_extension(), 
-      GetArenaForAllocation());
+  _impl_.file_extension_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+        _impl_.file_extension_.Set("", GetArenaForAllocation());
+  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if ((from._impl_._has_bits_[0] & 0x00000010u) != 0) {
+    _this->_impl_.file_extension_.Set(from._internal_file_extension(), _this->GetArenaForAllocation());
   }
-  shards_ = from.shards_;
+  _this->_impl_.shards_ = from._impl_.shards_;
+
   // @@protoc_insertion_point(copy_constructor:chrome_lang_id.TaskOutput)
 }
-
-inline void TaskOutput::SharedCtor() {
-name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-file_format_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-record_format_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-file_base_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-file_extension_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-shards_ = 0;
+inline void TaskOutput::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){},
+      /*decltype(_impl_._cached_size_)*/ {},
+      decltype(_impl_.name_){},
+      decltype(_impl_.file_format_){},
+      decltype(_impl_.record_format_){},
+      decltype(_impl_.file_base_){},
+      decltype(_impl_.file_extension_){},
+      decltype(_impl_.shards_){0},
+  };
+  _impl_.name_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+        _impl_.name_.Set("", GetArenaForAllocation());
+  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  _impl_.file_format_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+        _impl_.file_format_.Set("", GetArenaForAllocation());
+  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  _impl_.record_format_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+        _impl_.record_format_.Set("", GetArenaForAllocation());
+  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  _impl_.file_base_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+        _impl_.file_base_.Set("", GetArenaForAllocation());
+  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  _impl_.file_extension_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+        _impl_.file_extension_.Set("", GetArenaForAllocation());
+  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
-
 TaskOutput::~TaskOutput() {
   // @@protoc_insertion_point(destructor:chrome_lang_id.TaskOutput)
-  if (GetArenaForAllocation() != nullptr) return;
-  SharedDtor();
   _internal_metadata_.Delete<std::string>();
+  SharedDtor();
 }
-
 inline void TaskOutput::SharedDtor() {
-  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  name_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  file_format_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  record_format_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  file_base_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  file_extension_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-}
-
-void TaskOutput::ArenaDtor(void* object) {
-  TaskOutput* _this = reinterpret_cast< TaskOutput* >(object);
-  (void)_this;
-}
-void TaskOutput::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.name_.Destroy();
+  _impl_.file_format_.Destroy();
+  _impl_.record_format_.Destroy();
+  _impl_.file_base_.Destroy();
+  _impl_.file_extension_.Destroy();
 }
 void TaskOutput::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
-void TaskOutput::Clear() {
+PROTOBUF_NOINLINE void TaskOutput::Clear() {
 // @@protoc_insertion_point(message_clear_start:chrome_lang_id.TaskOutput)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  cached_has_bits = _has_bits_[0];
+  cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x0000001fu) {
     if (cached_has_bits & 0x00000001u) {
-      name_.ClearNonDefaultToEmpty();
+      _impl_.name_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000002u) {
-      file_format_.ClearNonDefaultToEmpty();
+      _impl_.file_format_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000004u) {
-      record_format_.ClearNonDefaultToEmpty();
+      _impl_.record_format_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000008u) {
-      file_base_.ClearNonDefaultToEmpty();
+      _impl_.file_base_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000010u) {
-      file_extension_.ClearNonDefaultToEmpty();
+      _impl_.file_extension_.ClearNonDefaultToEmpty();
     }
   }
-  shards_ = 0;
-  _has_bits_.Clear();
+  _impl_.shards_ = 0;
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
-const char* TaskOutput::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  _Internal::HasBits has_bits{};
-  while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    switch (tag >> 3) {
-      // required string name = 1;
-      case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          auto str = _internal_mutable_name();
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // optional string file_format = 2;
-      case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          auto str = _internal_mutable_file_format();
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // optional string record_format = 3;
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
-          auto str = _internal_mutable_record_format();
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // optional int32 shards = 4 [default = 0];
-      case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 32)) {
-          _Internal::set_has_shards(&has_bits);
-          shards_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // optional string file_base = 5;
-      case 5:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
-          auto str = _internal_mutable_file_base();
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // optional string file_extension = 6;
-      case 6:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 50)) {
-          auto str = _internal_mutable_file_extension();
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag == 0) || ((tag & 7) == 4)) {
-          CHK_(ptr);
-          ctx->SetLastTag(tag);
-          goto success;
-        }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<std::string>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
-      }
-    }  // switch
-  }  // while
-success:
-  _has_bits_.Or(has_bits);
+const char* TaskOutput::_InternalParse(
+    const char* ptr, ::_pbi::ParseContext* ctx) {
+  ptr = ::_pbi::TcParser::ParseLoop(this, ptr, ctx, &_table_.header);
   return ptr;
-failure:
-  ptr = nullptr;
-  goto success;
-#undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* TaskOutput::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:chrome_lang_id.TaskOutput)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
 
-  cached_has_bits = _has_bits_[0];
+PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
+const ::_pbi::TcParseTable<3, 6, 0, 0, 2> TaskOutput::_table_ = {
+  {
+    PROTOBUF_FIELD_OFFSET(TaskOutput, _impl_._has_bits_),
+    0, // no _extensions_
+    6, 56,  // max_field_number, fast_idx_mask
+    offsetof(decltype(_table_), field_lookup_table),
+    4294967232,  // skipmap
+    offsetof(decltype(_table_), field_entries),
+    6,  // num_field_entries
+    0,  // num_aux_entries
+    offsetof(decltype(_table_), field_names),  // no aux_entries
+    &_TaskOutput_default_instance_._instance,
+    ::_pbi::TcParser::GenericFallbackLite,  // fallback
+  }, {{
+    {::_pbi::TcParser::MiniParse, {}},
+    // required string name = 1;
+    {::_pbi::TcParser::FastBS1,
+     {10, 0, 0, PROTOBUF_FIELD_OFFSET(TaskOutput, _impl_.name_)}},
+    // optional string file_format = 2;
+    {::_pbi::TcParser::FastBS1,
+     {18, 1, 0, PROTOBUF_FIELD_OFFSET(TaskOutput, _impl_.file_format_)}},
+    // optional string record_format = 3;
+    {::_pbi::TcParser::FastBS1,
+     {26, 2, 0, PROTOBUF_FIELD_OFFSET(TaskOutput, _impl_.record_format_)}},
+    // optional int32 shards = 4 [default = 0];
+    {::_pbi::TcParser::FastV32S1,
+     {32, 5, 0, PROTOBUF_FIELD_OFFSET(TaskOutput, _impl_.shards_)}},
+    // optional string file_base = 5;
+    {::_pbi::TcParser::FastBS1,
+     {42, 3, 0, PROTOBUF_FIELD_OFFSET(TaskOutput, _impl_.file_base_)}},
+    // optional string file_extension = 6;
+    {::_pbi::TcParser::FastBS1,
+     {50, 4, 0, PROTOBUF_FIELD_OFFSET(TaskOutput, _impl_.file_extension_)}},
+    {::_pbi::TcParser::MiniParse, {}},
+  }}, {{
+    65535, 65535
+  }}, {{
+    // required string name = 1;
+    {PROTOBUF_FIELD_OFFSET(TaskOutput, _impl_.name_), _Internal::kHasBitsOffset + 0, 0,
+    (0 | ::_fl::kFcOptional | ::_fl::kBytes | ::_fl::kRepAString)},
+    // optional string file_format = 2;
+    {PROTOBUF_FIELD_OFFSET(TaskOutput, _impl_.file_format_), _Internal::kHasBitsOffset + 1, 0,
+    (0 | ::_fl::kFcOptional | ::_fl::kBytes | ::_fl::kRepAString)},
+    // optional string record_format = 3;
+    {PROTOBUF_FIELD_OFFSET(TaskOutput, _impl_.record_format_), _Internal::kHasBitsOffset + 2, 0,
+    (0 | ::_fl::kFcOptional | ::_fl::kBytes | ::_fl::kRepAString)},
+    // optional int32 shards = 4 [default = 0];
+    {PROTOBUF_FIELD_OFFSET(TaskOutput, _impl_.shards_), _Internal::kHasBitsOffset + 5, 0,
+    (0 | ::_fl::kFcOptional | ::_fl::kInt32)},
+    // optional string file_base = 5;
+    {PROTOBUF_FIELD_OFFSET(TaskOutput, _impl_.file_base_), _Internal::kHasBitsOffset + 3, 0,
+    (0 | ::_fl::kFcOptional | ::_fl::kBytes | ::_fl::kRepAString)},
+    // optional string file_extension = 6;
+    {PROTOBUF_FIELD_OFFSET(TaskOutput, _impl_.file_extension_), _Internal::kHasBitsOffset + 4, 0,
+    (0 | ::_fl::kFcOptional | ::_fl::kBytes | ::_fl::kRepAString)},
+  }},
+  // no aux_entries
+  {{
+  }},
+};
+
+::uint8_t* TaskOutput::_InternalSerialize(
+    ::uint8_t* target,
+    ::google::protobuf::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:chrome_lang_id.TaskOutput)
+  ::uint32_t cached_has_bits = 0;
+  (void)cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
   // required string name = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteStringMaybeAliased(
-        1, this->_internal_name(), target);
+    const std::string& _s = this->_internal_name();
+    target = stream->WriteStringMaybeAliased(1, _s, target);
   }
 
   // optional string file_format = 2;
   if (cached_has_bits & 0x00000002u) {
-    target = stream->WriteStringMaybeAliased(
-        2, this->_internal_file_format(), target);
+    const std::string& _s = this->_internal_file_format();
+    target = stream->WriteStringMaybeAliased(2, _s, target);
   }
 
   // optional string record_format = 3;
   if (cached_has_bits & 0x00000004u) {
-    target = stream->WriteStringMaybeAliased(
-        3, this->_internal_record_format(), target);
+    const std::string& _s = this->_internal_record_format();
+    target = stream->WriteStringMaybeAliased(3, _s, target);
   }
 
   // optional int32 shards = 4 [default = 0];
   if (cached_has_bits & 0x00000020u) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(4, this->_internal_shards(), target);
+    target = ::google::protobuf::internal::WireFormatLite::
+        WriteInt32ToArrayWithField<4>(
+            stream, this->_internal_shards(), target);
   }
 
   // optional string file_base = 5;
   if (cached_has_bits & 0x00000008u) {
-    target = stream->WriteStringMaybeAliased(
-        5, this->_internal_file_base(), target);
+    const std::string& _s = this->_internal_file_base();
+    target = stream->WriteStringMaybeAliased(5, _s, target);
   }
 
   // optional string file_extension = 6;
   if (cached_has_bits & 0x00000010u) {
-    target = stream->WriteStringMaybeAliased(
-        6, this->_internal_file_extension(), target);
+    const std::string& _s = this->_internal_file_extension();
+    target = stream->WriteStringMaybeAliased(6, _s, target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+    target = stream->WriteRaw(
+        _internal_metadata_.unknown_fields<std::string>(::google::protobuf::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::google::protobuf::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:chrome_lang_id.TaskOutput)
   return target;
 }
 
-size_t TaskOutput::ByteSizeLong() const {
+::size_t TaskOutput::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:chrome_lang_id.TaskOutput)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  // required string name = 1;
-  if (_internal_has_name()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_name());
-  }
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  cached_has_bits = _has_bits_[0];
+  // required string name = 1;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
+                                    this->_internal_name());
+  }
+
   if (cached_has_bits & 0x0000003eu) {
     // optional string file_format = 2;
     if (cached_has_bits & 0x00000002u) {
-      total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-          this->_internal_file_format());
+      total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
+                                      this->_internal_file_format());
     }
 
     // optional string record_format = 3;
     if (cached_has_bits & 0x00000004u) {
-      total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-          this->_internal_record_format());
+      total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
+                                      this->_internal_record_format());
     }
 
     // optional string file_base = 5;
     if (cached_has_bits & 0x00000008u) {
-      total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-          this->_internal_file_base());
+      total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
+                                      this->_internal_file_base());
     }
 
     // optional string file_extension = 6;
     if (cached_has_bits & 0x00000010u) {
-      total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-          this->_internal_file_extension());
+      total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
+                                      this->_internal_file_extension());
     }
 
     // optional int32 shards = 4 [default = 0];
     if (cached_has_bits & 0x00000020u) {
-      total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
+      total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(
           this->_internal_shards());
     }
 
   }
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+    total_size += _internal_metadata_.unknown_fields<std::string>(::google::protobuf::internal::GetEmptyString).size();
   }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  int cached_size = ::_pbi::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
 }
 
 void TaskOutput::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::PROTOBUF_NAMESPACE_ID::internal::DownCast<const TaskOutput*>(
+    const ::google::protobuf::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const TaskOutput*>(
       &from));
 }
 
 void TaskOutput::MergeFrom(const TaskOutput& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:chrome_lang_id.TaskOutput)
-  GOOGLE_DCHECK_NE(&from, this);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  TaskOutput* const _this = this;
+  // @@protoc_insertion_point(class_specific_merge_from_start:chrome_lang_id.TaskOutput)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = from._has_bits_[0];
+  cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x0000003fu) {
     if (cached_has_bits & 0x00000001u) {
-      _internal_set_name(from._internal_name());
+      _this->_internal_set_name(from._internal_name());
     }
     if (cached_has_bits & 0x00000002u) {
-      _internal_set_file_format(from._internal_file_format());
+      _this->_internal_set_file_format(from._internal_file_format());
     }
     if (cached_has_bits & 0x00000004u) {
-      _internal_set_record_format(from._internal_record_format());
+      _this->_internal_set_record_format(from._internal_record_format());
     }
     if (cached_has_bits & 0x00000008u) {
-      _internal_set_file_base(from._internal_file_base());
+      _this->_internal_set_file_base(from._internal_file_base());
     }
     if (cached_has_bits & 0x00000010u) {
-      _internal_set_file_extension(from._internal_file_extension());
+      _this->_internal_set_file_extension(from._internal_file_extension());
     }
     if (cached_has_bits & 0x00000020u) {
-      shards_ = from.shards_;
+      _this->_impl_.shards_ = from._impl_.shards_;
     }
-    _has_bits_[0] |= cached_has_bits;
+    _this->_impl_._has_bits_[0] |= cached_has_bits;
   }
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void TaskOutput::CopyFrom(const TaskOutput& from) {
@@ -1131,53 +1219,43 @@ void TaskOutput::CopyFrom(const TaskOutput& from) {
   MergeFrom(from);
 }
 
-bool TaskOutput::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_has_bits_)) return false;
+PROTOBUF_NOINLINE bool TaskOutput::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) {
+    return false;
+  }
   return true;
 }
 
 void TaskOutput::InternalSwap(TaskOutput* other) {
   using std::swap;
+  auto* lhs_arena = GetArenaForAllocation();
+  auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(_has_bits_[0], other->_has_bits_[0]);
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
-      &name_, GetArenaForAllocation(),
-      &other->name_, other->GetArenaForAllocation()
-  );
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
-      &file_format_, GetArenaForAllocation(),
-      &other->file_format_, other->GetArenaForAllocation()
-  );
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
-      &record_format_, GetArenaForAllocation(),
-      &other->record_format_, other->GetArenaForAllocation()
-  );
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
-      &file_base_, GetArenaForAllocation(),
-      &other->file_base_, other->GetArenaForAllocation()
-  );
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
-      &file_extension_, GetArenaForAllocation(),
-      &other->file_extension_, other->GetArenaForAllocation()
-  );
-  swap(shards_, other->shards_);
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.name_, lhs_arena,
+                                       &other->_impl_.name_, rhs_arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.file_format_, lhs_arena,
+                                       &other->_impl_.file_format_, rhs_arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.record_format_, lhs_arena,
+                                       &other->_impl_.record_format_, rhs_arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.file_base_, lhs_arena,
+                                       &other->_impl_.file_base_, rhs_arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.file_extension_, lhs_arena,
+                                       &other->_impl_.file_extension_, rhs_arena);
+        swap(_impl_.shards_, other->_impl_.shards_);
 }
 
 std::string TaskOutput::GetTypeName() const {
   return "chrome_lang_id.TaskOutput";
 }
 
-
 // ===================================================================
 
 class TaskSpec_Parameter::_Internal {
  public:
-  using HasBits = decltype(std::declval<TaskSpec_Parameter>()._has_bits_);
+  using HasBits = decltype(std::declval<TaskSpec_Parameter>()._impl_._has_bits_);
+  static constexpr ::int32_t kHasBitsOffset =
+    8 * PROTOBUF_FIELD_OFFSET(TaskSpec_Parameter, _impl_._has_bits_);
   static void set_has_name(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
@@ -1189,205 +1267,215 @@ class TaskSpec_Parameter::_Internal {
   }
 };
 
-TaskSpec_Parameter::TaskSpec_Parameter(::PROTOBUF_NAMESPACE_ID::Arena* arena,
-                         bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned) {
-  SharedCtor();
-  if (!is_message_owned) {
-    RegisterArenaDtor(arena);
-  }
+TaskSpec_Parameter::TaskSpec_Parameter(::google::protobuf::Arena* arena)
+    : ::google::protobuf::MessageLite(arena) {
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:chrome_lang_id.TaskSpec.Parameter)
 }
-TaskSpec_Parameter::TaskSpec_Parameter(const TaskSpec_Parameter& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(),
-      _has_bits_(from._has_bits_) {
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (from._internal_has_name()) {
-    name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_name(), 
-      GetArenaForAllocation());
+TaskSpec_Parameter::TaskSpec_Parameter(const TaskSpec_Parameter& from) : ::google::protobuf::MessageLite() {
+  TaskSpec_Parameter* const _this = this;
+  (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){from._impl_._has_bits_},
+      /*decltype(_impl_._cached_size_)*/ {},
+      decltype(_impl_.name_){},
+      decltype(_impl_.value_){},
+  };
+  _internal_metadata_.MergeFrom<std::string>(
+      from._internal_metadata_);
+  _impl_.name_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+        _impl_.name_.Set("", GetArenaForAllocation());
+  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if ((from._impl_._has_bits_[0] & 0x00000001u) != 0) {
+    _this->_impl_.name_.Set(from._internal_name(), _this->GetArenaForAllocation());
   }
-  value_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (from._internal_has_value()) {
-    value_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_value(), 
-      GetArenaForAllocation());
+  _impl_.value_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+        _impl_.value_.Set("", GetArenaForAllocation());
+  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if ((from._impl_._has_bits_[0] & 0x00000002u) != 0) {
+    _this->_impl_.value_.Set(from._internal_value(), _this->GetArenaForAllocation());
   }
+
   // @@protoc_insertion_point(copy_constructor:chrome_lang_id.TaskSpec.Parameter)
 }
-
-inline void TaskSpec_Parameter::SharedCtor() {
-name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-value_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+inline void TaskSpec_Parameter::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){},
+      /*decltype(_impl_._cached_size_)*/ {},
+      decltype(_impl_.name_){},
+      decltype(_impl_.value_){},
+  };
+  _impl_.name_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+        _impl_.name_.Set("", GetArenaForAllocation());
+  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  _impl_.value_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+        _impl_.value_.Set("", GetArenaForAllocation());
+  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
-
 TaskSpec_Parameter::~TaskSpec_Parameter() {
   // @@protoc_insertion_point(destructor:chrome_lang_id.TaskSpec.Parameter)
-  if (GetArenaForAllocation() != nullptr) return;
-  SharedDtor();
   _internal_metadata_.Delete<std::string>();
+  SharedDtor();
 }
-
 inline void TaskSpec_Parameter::SharedDtor() {
-  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  name_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  value_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-}
-
-void TaskSpec_Parameter::ArenaDtor(void* object) {
-  TaskSpec_Parameter* _this = reinterpret_cast< TaskSpec_Parameter* >(object);
-  (void)_this;
-}
-void TaskSpec_Parameter::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.name_.Destroy();
+  _impl_.value_.Destroy();
 }
 void TaskSpec_Parameter::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
-void TaskSpec_Parameter::Clear() {
+PROTOBUF_NOINLINE void TaskSpec_Parameter::Clear() {
 // @@protoc_insertion_point(message_clear_start:chrome_lang_id.TaskSpec.Parameter)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  cached_has_bits = _has_bits_[0];
+  cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
-      name_.ClearNonDefaultToEmpty();
+      _impl_.name_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000002u) {
-      value_.ClearNonDefaultToEmpty();
+      _impl_.value_.ClearNonDefaultToEmpty();
     }
   }
-  _has_bits_.Clear();
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
-const char* TaskSpec_Parameter::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  _Internal::HasBits has_bits{};
-  while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    switch (tag >> 3) {
-      // required string name = 4;
-      case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
-          auto str = _internal_mutable_name();
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // optional string value = 5;
-      case 5:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
-          auto str = _internal_mutable_value();
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag == 0) || ((tag & 7) == 4)) {
-          CHK_(ptr);
-          ctx->SetLastTag(tag);
-          goto success;
-        }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<std::string>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
-      }
-    }  // switch
-  }  // while
-success:
-  _has_bits_.Or(has_bits);
+const char* TaskSpec_Parameter::_InternalParse(
+    const char* ptr, ::_pbi::ParseContext* ctx) {
+  ptr = ::_pbi::TcParser::ParseLoop(this, ptr, ctx, &_table_.header);
   return ptr;
-failure:
-  ptr = nullptr;
-  goto success;
-#undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* TaskSpec_Parameter::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:chrome_lang_id.TaskSpec.Parameter)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
 
-  cached_has_bits = _has_bits_[0];
+PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
+const ::_pbi::TcParseTable<2, 2, 0, 0, 2> TaskSpec_Parameter::_table_ = {
+  {
+    PROTOBUF_FIELD_OFFSET(TaskSpec_Parameter, _impl_._has_bits_),
+    0, // no _extensions_
+    5, 24,  // max_field_number, fast_idx_mask
+    offsetof(decltype(_table_), field_lookup_table),
+    4294967271,  // skipmap
+    offsetof(decltype(_table_), field_entries),
+    2,  // num_field_entries
+    0,  // num_aux_entries
+    offsetof(decltype(_table_), field_names),  // no aux_entries
+    &_TaskSpec_Parameter_default_instance_._instance,
+    ::_pbi::TcParser::GenericFallbackLite,  // fallback
+  }, {{
+    // required string name = 4;
+    {::_pbi::TcParser::FastBS1,
+     {34, 0, 0, PROTOBUF_FIELD_OFFSET(TaskSpec_Parameter, _impl_.name_)}},
+    // optional string value = 5;
+    {::_pbi::TcParser::FastBS1,
+     {42, 1, 0, PROTOBUF_FIELD_OFFSET(TaskSpec_Parameter, _impl_.value_)}},
+    {::_pbi::TcParser::MiniParse, {}},
+    {::_pbi::TcParser::FastEndG1, {28, 28}},
+  }}, {{
+    65535, 65535
+  }}, {{
+    // required string name = 4;
+    {PROTOBUF_FIELD_OFFSET(TaskSpec_Parameter, _impl_.name_), _Internal::kHasBitsOffset + 0, 0,
+    (0 | ::_fl::kFcOptional | ::_fl::kBytes | ::_fl::kRepAString)},
+    // optional string value = 5;
+    {PROTOBUF_FIELD_OFFSET(TaskSpec_Parameter, _impl_.value_), _Internal::kHasBitsOffset + 1, 0,
+    (0 | ::_fl::kFcOptional | ::_fl::kBytes | ::_fl::kRepAString)},
+  }},
+  // no aux_entries
+  {{
+  }},
+};
+
+::uint8_t* TaskSpec_Parameter::_InternalSerialize(
+    ::uint8_t* target,
+    ::google::protobuf::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:chrome_lang_id.TaskSpec.Parameter)
+  ::uint32_t cached_has_bits = 0;
+  (void)cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
   // required string name = 4;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteStringMaybeAliased(
-        4, this->_internal_name(), target);
+    const std::string& _s = this->_internal_name();
+    target = stream->WriteStringMaybeAliased(4, _s, target);
   }
 
   // optional string value = 5;
   if (cached_has_bits & 0x00000002u) {
-    target = stream->WriteStringMaybeAliased(
-        5, this->_internal_value(), target);
+    const std::string& _s = this->_internal_value();
+    target = stream->WriteStringMaybeAliased(5, _s, target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+    target = stream->WriteRaw(
+        _internal_metadata_.unknown_fields<std::string>(::google::protobuf::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::google::protobuf::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:chrome_lang_id.TaskSpec.Parameter)
   return target;
 }
 
-size_t TaskSpec_Parameter::ByteSizeLong() const {
+::size_t TaskSpec_Parameter::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:chrome_lang_id.TaskSpec.Parameter)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  // required string name = 4;
-  if (_internal_has_name()) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_name());
-  }
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
+  // required string name = 4;
+  cached_has_bits = _impl_._has_bits_[0];
+  if (cached_has_bits & 0x00000001u) {
+    total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
+                                    this->_internal_name());
+  }
+
   // optional string value = 5;
-  cached_has_bits = _has_bits_[0];
   if (cached_has_bits & 0x00000002u) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_value());
+    total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
+                                    this->_internal_value());
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+    total_size += _internal_metadata_.unknown_fields<std::string>(::google::protobuf::internal::GetEmptyString).size();
   }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  int cached_size = ::_pbi::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
 }
 
 void TaskSpec_Parameter::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::PROTOBUF_NAMESPACE_ID::internal::DownCast<const TaskSpec_Parameter*>(
+    const ::google::protobuf::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const TaskSpec_Parameter*>(
       &from));
 }
 
 void TaskSpec_Parameter::MergeFrom(const TaskSpec_Parameter& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:chrome_lang_id.TaskSpec.Parameter)
-  GOOGLE_DCHECK_NE(&from, this);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  TaskSpec_Parameter* const _this = this;
+  // @@protoc_insertion_point(class_specific_merge_from_start:chrome_lang_id.TaskSpec.Parameter)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = from._has_bits_[0];
+  cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
-      _internal_set_name(from._internal_name());
+      _this->_internal_set_name(from._internal_name());
     }
     if (cached_has_bits & 0x00000002u) {
-      _internal_set_value(from._internal_value());
+      _this->_internal_set_value(from._internal_value());
     }
   }
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void TaskSpec_Parameter::CopyFrom(const TaskSpec_Parameter& from) {
@@ -1397,37 +1485,36 @@ void TaskSpec_Parameter::CopyFrom(const TaskSpec_Parameter& from) {
   MergeFrom(from);
 }
 
-bool TaskSpec_Parameter::IsInitialized() const {
-  if (_Internal::MissingRequiredFields(_has_bits_)) return false;
+PROTOBUF_NOINLINE bool TaskSpec_Parameter::IsInitialized() const {
+  if (_Internal::MissingRequiredFields(_impl_._has_bits_)) {
+    return false;
+  }
   return true;
 }
 
 void TaskSpec_Parameter::InternalSwap(TaskSpec_Parameter* other) {
   using std::swap;
+  auto* lhs_arena = GetArenaForAllocation();
+  auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(_has_bits_[0], other->_has_bits_[0]);
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
-      &name_, GetArenaForAllocation(),
-      &other->name_, other->GetArenaForAllocation()
-  );
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
-      &value_, GetArenaForAllocation(),
-      &other->value_, other->GetArenaForAllocation()
-  );
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.name_, lhs_arena,
+                                       &other->_impl_.name_, rhs_arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.value_, lhs_arena,
+                                       &other->_impl_.value_, rhs_arena);
 }
 
 std::string TaskSpec_Parameter::GetTypeName() const {
   return "chrome_lang_id.TaskSpec.Parameter";
 }
 
-
 // ===================================================================
 
 class TaskSpec::_Internal {
  public:
-  using HasBits = decltype(std::declval<TaskSpec>()._has_bits_);
+  using HasBits = decltype(std::declval<TaskSpec>()._impl_._has_bits_);
+  static constexpr ::int32_t kHasBitsOffset =
+    8 * PROTOBUF_FIELD_OFFSET(TaskSpec, _impl_._has_bits_);
   static void set_has_task_name(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
@@ -1436,301 +1523,295 @@ class TaskSpec::_Internal {
   }
 };
 
-TaskSpec::TaskSpec(::PROTOBUF_NAMESPACE_ID::Arena* arena,
-                         bool is_message_owned)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(arena, is_message_owned),
-  parameter_(arena),
-  input_(arena),
-  output_(arena) {
-  SharedCtor();
-  if (!is_message_owned) {
-    RegisterArenaDtor(arena);
-  }
+TaskSpec::TaskSpec(::google::protobuf::Arena* arena)
+    : ::google::protobuf::MessageLite(arena) {
+  SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:chrome_lang_id.TaskSpec)
 }
-TaskSpec::TaskSpec(const TaskSpec& from)
-  : ::PROTOBUF_NAMESPACE_ID::MessageLite(),
-      _has_bits_(from._has_bits_),
-      parameter_(from.parameter_),
-      input_(from.input_),
-      output_(from.output_) {
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
-  task_name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (from._internal_has_task_name()) {
-    task_name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_task_name(), 
-      GetArenaForAllocation());
+TaskSpec::TaskSpec(const TaskSpec& from) : ::google::protobuf::MessageLite() {
+  TaskSpec* const _this = this;
+  (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){from._impl_._has_bits_},
+      /*decltype(_impl_._cached_size_)*/ {},
+      decltype(_impl_.parameter_){from._impl_.parameter_},
+      decltype(_impl_.input_){from._impl_.input_},
+      decltype(_impl_.output_){from._impl_.output_},
+      decltype(_impl_.task_name_){},
+      decltype(_impl_.task_type_){},
+  };
+  _internal_metadata_.MergeFrom<std::string>(
+      from._internal_metadata_);
+  _impl_.task_name_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+        _impl_.task_name_.Set("", GetArenaForAllocation());
+  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if ((from._impl_._has_bits_[0] & 0x00000001u) != 0) {
+    _this->_impl_.task_name_.Set(from._internal_task_name(), _this->GetArenaForAllocation());
   }
-  task_type_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (from._internal_has_task_type()) {
-    task_type_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_task_type(), 
-      GetArenaForAllocation());
+  _impl_.task_type_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+        _impl_.task_type_.Set("", GetArenaForAllocation());
+  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if ((from._impl_._has_bits_[0] & 0x00000002u) != 0) {
+    _this->_impl_.task_type_.Set(from._internal_task_type(), _this->GetArenaForAllocation());
   }
+
   // @@protoc_insertion_point(copy_constructor:chrome_lang_id.TaskSpec)
 }
-
-inline void TaskSpec::SharedCtor() {
-task_name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-task_type_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+inline void TaskSpec::SharedCtor(::_pb::Arena* arena) {
+  (void)arena;
+  new (&_impl_) Impl_{
+      decltype(_impl_._has_bits_){},
+      /*decltype(_impl_._cached_size_)*/ {},
+      decltype(_impl_.parameter_){arena},
+      decltype(_impl_.input_){arena},
+      decltype(_impl_.output_){arena},
+      decltype(_impl_.task_name_){},
+      decltype(_impl_.task_type_){},
+  };
+  _impl_.task_name_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+        _impl_.task_name_.Set("", GetArenaForAllocation());
+  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  _impl_.task_type_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+        _impl_.task_type_.Set("", GetArenaForAllocation());
+  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
-
 TaskSpec::~TaskSpec() {
   // @@protoc_insertion_point(destructor:chrome_lang_id.TaskSpec)
-  if (GetArenaForAllocation() != nullptr) return;
-  SharedDtor();
   _internal_metadata_.Delete<std::string>();
+  SharedDtor();
 }
-
 inline void TaskSpec::SharedDtor() {
-  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
-  task_name_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  task_type_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-}
-
-void TaskSpec::ArenaDtor(void* object) {
-  TaskSpec* _this = reinterpret_cast< TaskSpec* >(object);
-  (void)_this;
-}
-void TaskSpec::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.parameter_.~RepeatedPtrField();
+  _impl_.input_.~RepeatedPtrField();
+  _impl_.output_.~RepeatedPtrField();
+  _impl_.task_name_.Destroy();
+  _impl_.task_type_.Destroy();
 }
 void TaskSpec::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
 
-void TaskSpec::Clear() {
+PROTOBUF_NOINLINE void TaskSpec::Clear() {
 // @@protoc_insertion_point(message_clear_start:chrome_lang_id.TaskSpec)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  parameter_.Clear();
-  input_.Clear();
-  output_.Clear();
-  cached_has_bits = _has_bits_[0];
+  _internal_mutable_parameter()->Clear();
+  _internal_mutable_input()->Clear();
+  _internal_mutable_output()->Clear();
+  cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
-      task_name_.ClearNonDefaultToEmpty();
+      _impl_.task_name_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000002u) {
-      task_type_.ClearNonDefaultToEmpty();
+      _impl_.task_type_.ClearNonDefaultToEmpty();
     }
   }
-  _has_bits_.Clear();
+  _impl_._has_bits_.Clear();
   _internal_metadata_.Clear<std::string>();
 }
 
-const char* TaskSpec::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  _Internal::HasBits has_bits{};
-  while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    switch (tag >> 3) {
-      // optional string task_name = 1;
-      case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          auto str = _internal_mutable_task_name();
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // optional string task_type = 2;
-      case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          auto str = _internal_mutable_task_type();
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // repeated group Parameter = 3 { ... };
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 27)) {
-          ptr -= 1;
-          do {
-            ptr += 1;
-            ptr = ctx->ParseGroup(_internal_add_parameter(), ptr, 27);
-            CHK_(ptr);
-            if (!ctx->DataAvailable(ptr)) break;
-          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<27>(ptr));
-        } else goto handle_unusual;
-        continue;
-      // repeated .chrome_lang_id.TaskInput input = 6;
-      case 6:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 50)) {
-          ptr -= 1;
-          do {
-            ptr += 1;
-            ptr = ctx->ParseMessage(_internal_add_input(), ptr);
-            CHK_(ptr);
-            if (!ctx->DataAvailable(ptr)) break;
-          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<50>(ptr));
-        } else goto handle_unusual;
-        continue;
-      // repeated .chrome_lang_id.TaskOutput output = 7;
-      case 7:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 58)) {
-          ptr -= 1;
-          do {
-            ptr += 1;
-            ptr = ctx->ParseMessage(_internal_add_output(), ptr);
-            CHK_(ptr);
-            if (!ctx->DataAvailable(ptr)) break;
-          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<58>(ptr));
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag == 0) || ((tag & 7) == 4)) {
-          CHK_(ptr);
-          ctx->SetLastTag(tag);
-          goto success;
-        }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<std::string>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
-      }
-    }  // switch
-  }  // while
-success:
-  _has_bits_.Or(has_bits);
+const char* TaskSpec::_InternalParse(
+    const char* ptr, ::_pbi::ParseContext* ctx) {
+  ptr = ::_pbi::TcParser::ParseLoop(this, ptr, ctx, &_table_.header);
   return ptr;
-failure:
-  ptr = nullptr;
-  goto success;
-#undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* TaskSpec::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:chrome_lang_id.TaskSpec)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
 
-  cached_has_bits = _has_bits_[0];
+PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1
+const ::_pbi::TcParseTable<3, 5, 3, 0, 2> TaskSpec::_table_ = {
+  {
+    PROTOBUF_FIELD_OFFSET(TaskSpec, _impl_._has_bits_),
+    0, // no _extensions_
+    7, 56,  // max_field_number, fast_idx_mask
+    offsetof(decltype(_table_), field_lookup_table),
+    4294967192,  // skipmap
+    offsetof(decltype(_table_), field_entries),
+    5,  // num_field_entries
+    3,  // num_aux_entries
+    offsetof(decltype(_table_), aux_entries),
+    &_TaskSpec_default_instance_._instance,
+    ::_pbi::TcParser::GenericFallbackLite,  // fallback
+  }, {{
+    {::_pbi::TcParser::MiniParse, {}},
+    // optional string task_name = 1;
+    {::_pbi::TcParser::FastBS1,
+     {10, 0, 0, PROTOBUF_FIELD_OFFSET(TaskSpec, _impl_.task_name_)}},
+    // optional string task_type = 2;
+    {::_pbi::TcParser::FastBS1,
+     {18, 1, 0, PROTOBUF_FIELD_OFFSET(TaskSpec, _impl_.task_type_)}},
+    // repeated group Parameter = 3 { ... };
+    {::_pbi::TcParser::FastGtR1,
+     {27, 63, 0, PROTOBUF_FIELD_OFFSET(TaskSpec, _impl_.parameter_)}},
+    {::_pbi::TcParser::MiniParse, {}},
+    {::_pbi::TcParser::MiniParse, {}},
+    // repeated .chrome_lang_id.TaskInput input = 6;
+    {::_pbi::TcParser::FastMtR1,
+     {50, 63, 1, PROTOBUF_FIELD_OFFSET(TaskSpec, _impl_.input_)}},
+    // repeated .chrome_lang_id.TaskOutput output = 7;
+    {::_pbi::TcParser::FastMtR1,
+     {58, 63, 2, PROTOBUF_FIELD_OFFSET(TaskSpec, _impl_.output_)}},
+  }}, {{
+    65535, 65535
+  }}, {{
+    // optional string task_name = 1;
+    {PROTOBUF_FIELD_OFFSET(TaskSpec, _impl_.task_name_), _Internal::kHasBitsOffset + 0, 0,
+    (0 | ::_fl::kFcOptional | ::_fl::kBytes | ::_fl::kRepAString)},
+    // optional string task_type = 2;
+    {PROTOBUF_FIELD_OFFSET(TaskSpec, _impl_.task_type_), _Internal::kHasBitsOffset + 1, 0,
+    (0 | ::_fl::kFcOptional | ::_fl::kBytes | ::_fl::kRepAString)},
+    // repeated group Parameter = 3 { ... };
+    {PROTOBUF_FIELD_OFFSET(TaskSpec, _impl_.parameter_), -1, 0,
+    (0 | ::_fl::kFcRepeated | ::_fl::kMessage | ::_fl::kRepGroup | ::_fl::kTvTable)},
+    // repeated .chrome_lang_id.TaskInput input = 6;
+    {PROTOBUF_FIELD_OFFSET(TaskSpec, _impl_.input_), -1, 1,
+    (0 | ::_fl::kFcRepeated | ::_fl::kMessage | ::_fl::kTvTable)},
+    // repeated .chrome_lang_id.TaskOutput output = 7;
+    {PROTOBUF_FIELD_OFFSET(TaskSpec, _impl_.output_), -1, 2,
+    (0 | ::_fl::kFcRepeated | ::_fl::kMessage | ::_fl::kTvTable)},
+  }}, {{
+    {::_pbi::TcParser::GetTable<::chrome_lang_id::TaskSpec_Parameter>()},
+    {::_pbi::TcParser::GetTable<::chrome_lang_id::TaskInput>()},
+    {::_pbi::TcParser::GetTable<::chrome_lang_id::TaskOutput>()},
+  }}, {{
+  }},
+};
+
+::uint8_t* TaskSpec::_InternalSerialize(
+    ::uint8_t* target,
+    ::google::protobuf::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:chrome_lang_id.TaskSpec)
+  ::uint32_t cached_has_bits = 0;
+  (void)cached_has_bits;
+
+  cached_has_bits = _impl_._has_bits_[0];
   // optional string task_name = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = stream->WriteStringMaybeAliased(
-        1, this->_internal_task_name(), target);
+    const std::string& _s = this->_internal_task_name();
+    target = stream->WriteStringMaybeAliased(1, _s, target);
   }
 
   // optional string task_type = 2;
   if (cached_has_bits & 0x00000002u) {
-    target = stream->WriteStringMaybeAliased(
-        2, this->_internal_task_type(), target);
+    const std::string& _s = this->_internal_task_type();
+    target = stream->WriteStringMaybeAliased(2, _s, target);
   }
 
   // repeated group Parameter = 3 { ... };
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->_internal_parameter_size()); i < n; i++) {
+  for (unsigned i = 0,
+      n = static_cast<unsigned>(this->_internal_parameter_size()); i < n; i++) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteGroup(3, this->_internal_parameter(i), target, stream);
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteGroup(3, this->_internal_parameter().Get(i), target, stream);
   }
 
   // repeated .chrome_lang_id.TaskInput input = 6;
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->_internal_input_size()); i < n; i++) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(6, this->_internal_input(i), target, stream);
+  for (unsigned i = 0,
+      n = static_cast<unsigned>(this->_internal_input_size()); i < n; i++) {
+    const auto& repfield = this->_internal_input().Get(i);
+    target = ::google::protobuf::internal::WireFormatLite::
+        InternalWriteMessage(6, repfield, repfield.GetCachedSize(), target, stream);
   }
 
   // repeated .chrome_lang_id.TaskOutput output = 7;
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->_internal_output_size()); i < n; i++) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(7, this->_internal_output(i), target, stream);
+  for (unsigned i = 0,
+      n = static_cast<unsigned>(this->_internal_output_size()); i < n; i++) {
+    const auto& repfield = this->_internal_output().Get(i);
+    target = ::google::protobuf::internal::WireFormatLite::
+        InternalWriteMessage(7, repfield, repfield.GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = stream->WriteRaw(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).data(),
-        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size()), target);
+    target = stream->WriteRaw(
+        _internal_metadata_.unknown_fields<std::string>(::google::protobuf::internal::GetEmptyString).data(),
+        static_cast<int>(_internal_metadata_.unknown_fields<std::string>(::google::protobuf::internal::GetEmptyString).size()), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:chrome_lang_id.TaskSpec)
   return target;
 }
 
-size_t TaskSpec::ByteSizeLong() const {
+::size_t TaskSpec::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:chrome_lang_id.TaskSpec)
-  size_t total_size = 0;
+  ::size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // repeated group Parameter = 3 { ... };
   total_size += 2UL * this->_internal_parameter_size();
-  for (const auto& msg : this->parameter_) {
+  for (const auto& msg : this->_internal_parameter()) {
     total_size +=
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GroupSize(msg);
+      ::google::protobuf::internal::WireFormatLite::GroupSize(msg);
   }
-
   // repeated .chrome_lang_id.TaskInput input = 6;
   total_size += 1UL * this->_internal_input_size();
-  for (const auto& msg : this->input_) {
+  for (const auto& msg : this->_internal_input()) {
     total_size +=
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
+      ::google::protobuf::internal::WireFormatLite::MessageSize(msg);
   }
-
   // repeated .chrome_lang_id.TaskOutput output = 7;
   total_size += 1UL * this->_internal_output_size();
-  for (const auto& msg : this->output_) {
+  for (const auto& msg : this->_internal_output()) {
     total_size +=
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
+      ::google::protobuf::internal::WireFormatLite::MessageSize(msg);
   }
-
-  cached_has_bits = _has_bits_[0];
+  cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     // optional string task_name = 1;
     if (cached_has_bits & 0x00000001u) {
-      total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-          this->_internal_task_name());
+      total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
+                                      this->_internal_task_name());
     }
 
     // optional string task_type = 2;
     if (cached_has_bits & 0x00000002u) {
-      total_size += 1 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-          this->_internal_task_type());
+      total_size += 1 + ::google::protobuf::internal::WireFormatLite::StringSize(
+                                      this->_internal_task_type());
     }
 
   }
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    total_size += _internal_metadata_.unknown_fields<std::string>(::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString).size();
+    total_size += _internal_metadata_.unknown_fields<std::string>(::google::protobuf::internal::GetEmptyString).size();
   }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  int cached_size = ::_pbi::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
 }
 
 void TaskSpec::CheckTypeAndMergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::MessageLite& from) {
-  MergeFrom(*::PROTOBUF_NAMESPACE_ID::internal::DownCast<const TaskSpec*>(
+    const ::google::protobuf::MessageLite& from) {
+  MergeFrom(*::_pbi::DownCast<const TaskSpec*>(
       &from));
 }
 
 void TaskSpec::MergeFrom(const TaskSpec& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:chrome_lang_id.TaskSpec)
-  GOOGLE_DCHECK_NE(&from, this);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  TaskSpec* const _this = this;
+  // @@protoc_insertion_point(class_specific_merge_from_start:chrome_lang_id.TaskSpec)
+  ABSL_DCHECK_NE(&from, _this);
+  ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  parameter_.MergeFrom(from.parameter_);
-  input_.MergeFrom(from.input_);
-  output_.MergeFrom(from.output_);
-  cached_has_bits = from._has_bits_[0];
+  _this->_internal_mutable_parameter()->MergeFrom(from._internal_parameter());
+  _this->_internal_mutable_input()->MergeFrom(from._internal_input());
+  _this->_internal_mutable_output()->MergeFrom(from._internal_output());
+  cached_has_bits = from._impl_._has_bits_[0];
   if (cached_has_bits & 0x00000003u) {
     if (cached_has_bits & 0x00000001u) {
-      _internal_set_task_name(from._internal_task_name());
+      _this->_internal_set_task_name(from._internal_task_name());
     }
     if (cached_has_bits & 0x00000002u) {
-      _internal_set_task_type(from._internal_task_type());
+      _this->_internal_set_task_type(from._internal_task_type());
     }
   }
-  _internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
+  _this->_internal_metadata_.MergeFrom<std::string>(from._internal_metadata_);
 }
 
 void TaskSpec::CopyFrom(const TaskSpec& from) {
@@ -1740,56 +1821,60 @@ void TaskSpec::CopyFrom(const TaskSpec& from) {
   MergeFrom(from);
 }
 
-bool TaskSpec::IsInitialized() const {
-  if (!::PROTOBUF_NAMESPACE_ID::internal::AllAreInitialized(parameter_)) return false;
-  if (!::PROTOBUF_NAMESPACE_ID::internal::AllAreInitialized(input_)) return false;
-  if (!::PROTOBUF_NAMESPACE_ID::internal::AllAreInitialized(output_)) return false;
+PROTOBUF_NOINLINE bool TaskSpec::IsInitialized() const {
+  if (!::google::protobuf::internal::AllAreInitialized(_internal_parameter()))
+    return false;
+  if (!::google::protobuf::internal::AllAreInitialized(_internal_input()))
+    return false;
+  if (!::google::protobuf::internal::AllAreInitialized(_internal_output()))
+    return false;
   return true;
 }
 
 void TaskSpec::InternalSwap(TaskSpec* other) {
   using std::swap;
+  auto* lhs_arena = GetArenaForAllocation();
+  auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  swap(_has_bits_[0], other->_has_bits_[0]);
-  parameter_.InternalSwap(&other->parameter_);
-  input_.InternalSwap(&other->input_);
-  output_.InternalSwap(&other->output_);
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
-      &task_name_, GetArenaForAllocation(),
-      &other->task_name_, other->GetArenaForAllocation()
-  );
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
-      &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
-      &task_type_, GetArenaForAllocation(),
-      &other->task_type_, other->GetArenaForAllocation()
-  );
+  swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
+  _internal_mutable_parameter()->InternalSwap(other->_internal_mutable_parameter());
+  _internal_mutable_input()->InternalSwap(other->_internal_mutable_input());
+  _internal_mutable_output()->InternalSwap(other->_internal_mutable_output());
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.task_name_, lhs_arena,
+                                       &other->_impl_.task_name_, rhs_arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.task_type_, lhs_arena,
+                                       &other->_impl_.task_type_, rhs_arena);
 }
 
 std::string TaskSpec::GetTypeName() const {
   return "chrome_lang_id.TaskSpec";
 }
 
-
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace chrome_lang_id
-PROTOBUF_NAMESPACE_OPEN
-template<> PROTOBUF_NOINLINE ::chrome_lang_id::TaskInput_Part* Arena::CreateMaybeMessage< ::chrome_lang_id::TaskInput_Part >(Arena* arena) {
+namespace google {
+namespace protobuf {
+template<> PROTOBUF_NOINLINE ::chrome_lang_id::TaskInput_Part*
+Arena::CreateMaybeMessage< ::chrome_lang_id::TaskInput_Part >(Arena* arena) {
   return Arena::CreateMessageInternal< ::chrome_lang_id::TaskInput_Part >(arena);
 }
-template<> PROTOBUF_NOINLINE ::chrome_lang_id::TaskInput* Arena::CreateMaybeMessage< ::chrome_lang_id::TaskInput >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::chrome_lang_id::TaskInput*
+Arena::CreateMaybeMessage< ::chrome_lang_id::TaskInput >(Arena* arena) {
   return Arena::CreateMessageInternal< ::chrome_lang_id::TaskInput >(arena);
 }
-template<> PROTOBUF_NOINLINE ::chrome_lang_id::TaskOutput* Arena::CreateMaybeMessage< ::chrome_lang_id::TaskOutput >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::chrome_lang_id::TaskOutput*
+Arena::CreateMaybeMessage< ::chrome_lang_id::TaskOutput >(Arena* arena) {
   return Arena::CreateMessageInternal< ::chrome_lang_id::TaskOutput >(arena);
 }
-template<> PROTOBUF_NOINLINE ::chrome_lang_id::TaskSpec_Parameter* Arena::CreateMaybeMessage< ::chrome_lang_id::TaskSpec_Parameter >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::chrome_lang_id::TaskSpec_Parameter*
+Arena::CreateMaybeMessage< ::chrome_lang_id::TaskSpec_Parameter >(Arena* arena) {
   return Arena::CreateMessageInternal< ::chrome_lang_id::TaskSpec_Parameter >(arena);
 }
-template<> PROTOBUF_NOINLINE ::chrome_lang_id::TaskSpec* Arena::CreateMaybeMessage< ::chrome_lang_id::TaskSpec >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::chrome_lang_id::TaskSpec*
+Arena::CreateMaybeMessage< ::chrome_lang_id::TaskSpec >(Arena* arena) {
   return Arena::CreateMessageInternal< ::chrome_lang_id::TaskSpec >(arena);
 }
-PROTOBUF_NAMESPACE_CLOSE
-
+}  // namespace protobuf
+}  // namespace google
 // @@protoc_insertion_point(global_scope)
-#include <google/protobuf/port_undef.inc>
+#include "google/protobuf/port_undef.inc"

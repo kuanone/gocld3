@@ -7,9 +7,9 @@ Package cld3 implements language detection using the Compact Language Detector v
 This package includes the relevant sources from the cld3 project, so it doesn't
 require any external dependencies. For more information on CLD3, see [https://github.com/google/cld3/](https://github.com/google/cld3/).
 
-Install with `go get github.com/jmhodges/gocld3/cld3`.
+Install with `go get github.com/kuanone/gocld3/cld3`.
 
-Documentation is available on [GoDoc](https://godoc.org/github.com/jmhodges/gocld3/cld3).
+Documentation is available on [GoDoc](https://godoc.org/github.com/kuanone/gocld3/cld3).
 
 ### Example
 
@@ -28,3 +28,18 @@ Documentation is available on [GoDoc](https://godoc.org/github.com/jmhodges/gocl
 		fmt.Println("ah, and this one is", res.Language)
 	}
   ```
+
+### Build
+
+you need `protobuf` 
+
+install by source code
+
+```shell
+git clone https://github.com/protocolbuffers/protobuf.git
+cd protobuf
+git submodule update --init --recursive
+mkdir build && cd build
+cmake ..
+make -j
+sudo make install

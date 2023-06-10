@@ -5,7 +5,7 @@
 // This packages includes the relevant sources from the CLD3 project, so it doesn't require any external dependencies. For more information on CLD3, see https://github.com/google/cld3/ .
 package cld3
 
-// #cgo CXXFLAGS: -std=c++11
+// #cgo CXXFLAGS: -std=c++17
 // #cgo pkg-config: protobuf
 // #include <stdlib.h>
 // #include "cld3.h"
@@ -62,10 +62,46 @@ func (li LanguageIdentifier) FindLanguage(text string) Result {
 	res := C.find_language(li.li, cs, C.int(len(text)))
 	r := Result{}
 	r.Language = C.GoStringN(res.language, res.len_language)
+	C.free(unsafe.Pointer(res.language))
+
 	r.Probability = float32(res.probability)
 	r.IsReliable = bool(res.is_reliable)
 	r.Proportion = float32(res.proportion)
 	return r
+}
+
+func (li LanguageIdentifier) FindTopNMostFreqLangs(text string, num int) []Result {
+	cs := C.CString(text)
+	defer C.free(unsafe.Pointer(cs))
+	// Declare a variable to store the size of the results
+	var outSize C.int
+
+	cResults := C.find_topn_most_freq_langs(li.li, cs, C.int(len(text)), C.int(num), &outSize)
+
+	if int(outSize) == 0 {
+		return nil
+	}
+
+	// Convert the C results to Go slice
+	goResults := make([]Result, int(outSize))
+
+	// Convert the C results to Go slice
+	for i := 0; i < int(outSize); i++ {
+		// Access each element using pointer arithmetic and type casting
+		result := *(*C.Result)(unsafe.Pointer(uintptr(unsafe.Pointer(cResults)) + uintptr(i)*unsafe.Sizeof(C.Result{})))
+
+		goResults[i].Language = C.GoStringN(result.language, result.len_language)
+		C.free(unsafe.Pointer(result.language))
+		goResults[i].Probability = float32(result.probability)
+		goResults[i].IsReliable = bool(result.is_reliable)
+		goResults[i].Proportion = float32(result.proportion)
+	}
+	C.free(unsafe.Pointer(cResults))
+
+	return goResults
+}
+func (li LanguageIdentifier) Free() {
+	C.free_language_identifier(li.li)
 }
 
 type Result struct {
